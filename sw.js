@@ -1,4 +1,5 @@
-const CACHE='luxar-cache-v1';
+
+const CACHE='luxar-pro-v2';
 
 self.addEventListener('install',e=>{
   e.waitUntil(
@@ -7,7 +8,8 @@ self.addEventListener('install',e=>{
         './',
         './index.html',
         './styles.css',
-        './app.js'
+        './app.js',
+        './manifest.json'
       ]);
     })
   );

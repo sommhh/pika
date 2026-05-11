@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>LuxAR Pro MAX</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>LuxAR Pro Improved</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0a84ff">
 <link rel="stylesheet" href="styles.css">
@@ -14,24 +15,27 @@
 <canvas id="overlay"></canvas>
 
 <div id="ui">
-  <h2>LuxAR Pro MAX</h2>
-
-  <div class="row">
+  <div class="topbar">
     <input id="siteName" placeholder="現場名">
     <input id="roomName" placeholder="部屋名">
   </div>
 
-  <div class="row">
-    <button id="addBtn">測定点追加</button>
-    <button id="exportBtn">CSV出力</button>
+  <div class="toolbar">
+    <button id="addBtn">＋追加</button>
+    <button id="toggleLabelBtn">番号のみ</button>
+    <button id="exportCsvBtn">CSV</button>
+    <button id="exportPdfBtn">PDF</button>
   </div>
 
-  <div class="row">
-    <input id="offLux" type="number" placeholder="消灯lx">
-    <input id="onLux" type="number" placeholder="点灯lx">
+  <div class="measureRow">
+    <input id="offLux" type="number" placeholder="消灯">
+    <input id="onLux" type="number" placeholder="点灯">
+    <input id="targetLux" type="number" placeholder="基準">
   </div>
 
-  <div id="points"></div>
+  <input id="comment" placeholder="コメント">
+
+  <div id="pointList"></div>
 </div>
 
 <script src="app.js"></script>
